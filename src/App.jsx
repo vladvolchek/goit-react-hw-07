@@ -12,7 +12,7 @@ import { fetchContacts } from "./redux/contactsOps";
 export const App = () => {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectLoading);
-  const error = useSelector(selectError);
+  const errors = useSelector(selectError);
   const contacts = useSelector(selectContacts);
   console.log(contacts)
 useEffect(() => {dispatch(fetchContacts())},[dispatch])
